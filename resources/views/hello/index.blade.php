@@ -8,11 +8,19 @@
 
 @section('content')
 <p> ここが本文のコンテンツです</p>
-<table>
-@foreach($data as $item)
-<tr><th>{{$item['name']}}</th><td>{{$item['mail']}}</td></tr>
+ <table>
+<tr><th>Name</th><th>Mail</th><th>Age</th></tr>
+@foreach($items as $item)
+<tr>
+<td>{{$item->name}}</td>
+<td>{{$item->mail}}</td>
+<td>{{$item->age}}</td>
+</tr>
 @endforeach
-</table>
+</table> 
+
+
+
 @endsection
 
 
