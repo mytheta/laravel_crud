@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\middleware\HelloMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +16,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello','HelloController@index');
+Route::get('hello','HelloController@index')
+    ->middleware(HelloMiddleware::class);
 
 
 // Route::get('/hello', function () {
